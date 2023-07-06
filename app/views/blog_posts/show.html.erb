@@ -1,0 +1,18 @@
+<h1><%= @blog_post.title%></h1>
+<h1><%= @blog_post.body %></h3>
+<%= link_to "Edit", edit_blog_post_path  if user_signed_in? %>
+<%= button_to "Destroy", blog_post_path, method: :delete  if user_signed_in? %>
+<p>Debug params:</p>
+<%= debug params %>
+<br>
+debug blog_post
+<%= debug @blog_post %>
+<br>
+<%= debug @blog_post.to_yaml %>
+<br>
+<%= debug @blog_post.to_json %>
+
+<%=  @blog_post.inspect %>
+
+
+<% console %>

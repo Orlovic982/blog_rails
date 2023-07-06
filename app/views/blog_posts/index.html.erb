@@ -1,0 +1,13 @@
+<h1>My blog</h1>
+<% @blog_posts.each do |blog| %>
+  <div>
+    <h2><%= link_to blog.title, blog %>
+    </h2>
+    <!--
+    <h2><%= link_to blog.title, blog_post_path(blog) %>
+    </h2>
+    -->
+    <%= blog.body %>
+  </div>
+<% end %>
+<%= link_to " Create ne blog", new_blog_post_path %>
